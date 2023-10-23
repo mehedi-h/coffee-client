@@ -58,7 +58,7 @@ const AddCoffee = () => {
                     </div>
                     <div className="form-control w-1/2">
                         <label className="label">
-                            <span className="font-bold">Available Quantity</span>
+                            <span className="font-bold">Quantity</span>
                         </label>
                         <label className="input-group">
                             
@@ -123,7 +123,7 @@ const AddCoffee = () => {
                 </div>
 
                 {/* submit btn */}
-                <input type="submit" value="Add Coffee" className="btn btn-block bg-gray-800 text-white font-bold"/>
+                <input type="submit" value="Add Coffee" className="w-full md:py-2.5 bg-gray-800 text-white rounded-sm font-bold"/>
             </form>
         </div>
     );
