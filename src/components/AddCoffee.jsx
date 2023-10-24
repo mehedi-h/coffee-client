@@ -32,7 +32,7 @@ const AddCoffee = () => {
                     text: 'Coffee added successfully',
                     icon: 'success',
                     confirmButtonText: 'Cool'
-                  })
+                })
             }
             form.reset()
         })
