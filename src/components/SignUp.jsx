@@ -10,12 +10,13 @@ const SignUp = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        createUser( email, password )
+        console.log( email, password );
+        createUser(email, password)
         .then(result => {
             console.log(result.user);
         })
         .catch(error => {
-            console.log(error.message);
+            console.error(error);
         })
     }
 
