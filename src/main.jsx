@@ -8,12 +8,13 @@ import App from "./App";
 import SignUp from "./components/SignUp";
 import Signin from "./components/Signin";
 import AuthProviders from "./Providers/AuthProviders";
+import Users from "./components/Users";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-    loader: () => fetch("http://localhost:5000/coffee"),
+    loader: () => fetch("https://coffee-server-ftz8lwl7e-m-h-shamims-projects.vercel.app/coffee"),
   },
   {
     path: "/addCoffee",
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
   {
     path: "/updateCoffee/:id",
     element: <UpdateCoffee></UpdateCoffee>,
-    loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`),
+    loader: ({ params }) => fetch(`https://coffee-server-ftz8lwl7e-m-h-shamims-projects.vercel.app/coffee/${params.id}`),
   },
   {
     path: "/signup",
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
     path: "/signin",
     element: <Signin></Signin>,
   },
+  {
+    path: "/users",
+    element: <Users></Users>,
+    loader: () => fetch('https://coffee-server-ftz8lwl7e-m-h-shamims-projects.vercel.app/user')
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
